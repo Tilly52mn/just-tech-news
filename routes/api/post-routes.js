@@ -82,6 +82,7 @@ router.put('/upvote', (req, res) => {
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => res.json(err));
+    
   Post.upvote(req.body, { Vote })
     .then(updatedPostData => res.json(updatedPostData))
     .catch(err => {
